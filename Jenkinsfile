@@ -7,7 +7,7 @@ node {
           sh 'zip pythonscript.zip app.py util.py'
         }
         stage('deploy') {
-          sh 'aws s3api create-bucket --bucket sample-bucket --region us-east-1'
-	  sh 'aws s3 cp pythonscript.zip s3://sample-bucket/'
+          sh 'aws s3api create-bucket --bucket first-project --region us-east-1'
+	  sh 'aws s3 cp pythonscript.zip s3://first-project/'
         }
 }
